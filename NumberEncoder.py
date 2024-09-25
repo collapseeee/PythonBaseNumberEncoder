@@ -50,7 +50,7 @@ def encodeNumberToBase(inputNumber, inputDecimal, toBaseNumber):
     #Number encoding.
     while(True):
         i = str(inputNumber%toBaseNumber)
-        #case of toBase 11  to 16.
+        #case of toBase 10  to 15.
         match (i):
             case "10":
                 i = "A"
