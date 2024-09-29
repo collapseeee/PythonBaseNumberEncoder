@@ -1,6 +1,5 @@
 ﻿# PythonBaseNumberEncoder
-By Collapseeee. 24 September 2024.
-Undone, Logic error on number input that between 0 to 1. Will be fixed later.
+By Collapseeee. 29 September 2024.
 
 ## What does the program do?
 To translate or encode the input float number to the base number that the user wanted to.
