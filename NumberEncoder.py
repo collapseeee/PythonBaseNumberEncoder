@@ -24,29 +24,30 @@ while(True):
 def float_to_base_b(x,b):
     inputNumber = x
     toBaseNumber = b
-    # split number and decimal.
+    # split number and decimal. and check if negative
+    isNegativeNumber = False;
+    if (inputNumber<0):
+        isNegativeNumber = True
+        inputNumber = inputNumber*(-1)
+    else:
+        isNegativeNumber = False
     inputNumber = str(inputNumber)
     splittedString = inputNumber.split(".")
     splittedNumber = int(splittedString[0])
     splittedDecimal = ("0."+splittedString[1])
     splittedDecimal = float(splittedDecimal)
     encodedNumber = encodeNumberToBase(splittedNumber, splittedDecimal, toBaseNumber)
-    return encodedNumber
+    if (isNegativeNumber):
+        encodedNumber = "-" + encodedNumber
+    return float(encodedNumber)
 #===================================================================================================================#
 
 
 #===================================================================================================================#
 # define the function to get the value of the number in a base number that user have provided.
 def encodeNumberToBase(inputNumber, inputDecimal, toBaseNumber):
-    if (inputNumber<0):
-        isNegativeNumber = True
-        inputNumber = inputNumber*(-1)
-    else:
-        isNegativeNumber = False
-
     listOfNumbersRemainder = []
     listOfDecimalsNumber = []
-    decimalMultiplyCounter = 0
     #Number encoding.
     while(True):
         i = str(inputNumber%toBaseNumber)
@@ -87,8 +88,6 @@ def encodeNumberToBase(inputNumber, inputDecimal, toBaseNumber):
     encodedDecimal = ""
     encodedDecimal = encodedDecimal.join(listOfDecimalsNumber)
     result = encodedNumber+"."+encodedDecimal
-    if (isNegativeNumber):
-        result = "-" + result
     return result
 #===================================================================================================================#
 
