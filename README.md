@@ -1,8 +1,6 @@
 ﻿# PythonBaseNumberEncoder
 By Collapseeee. 24 September 2024.
-
-## Background.
-> I got a problem with the program from my friend. I found it's a very interesting idea to work on, so I decided to work on it for a day. This program is in Python. My background in the language is not really good, but there is still some foundational knowledge. Currently, I am studying Software Engineering as my major and am focusing on Java Programming. While I was writing the program, I recalled my Python skills by searching for list operations.
+Undone, Logic error on number input that between 0 to 1. Will be fixed later.
 
 ## What does the program do?
 To translate or encode the input float number to the base number that the user wanted to.
